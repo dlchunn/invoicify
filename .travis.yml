@@ -1,5 +1,9 @@
 language: java
+provider: heroku
 services:
-  - postgresql
+- postgresql
 before_script:
-  - psql -c 'create database invoicify;' -U postgres
+- psql -c 'create database invoicify;' -U postgres
+deploy:
+  api_key:
+    secure: Ql9Q0/nGR8/nevOjCuRZOpc7B3XurIZ5t9I275MByQIv3x/1yfWWvK0HMNrPb21uCLzsXWq70J+cST5D3EkSVl5/Foy2DYZZoBp7ddDYy+pBQLqF7NZv69A5SxGjxcF6u7u1PcJcKcSa/vSjd2NreA/rLSemGn0N+2lkhwzLiR5V1Y/NUw7k98yp/uAz6ZgWMH5yqn4TZWwJyWMXnHVALjeLzmT3eva2rAORnvafzf9eIE0MX2naHMl/syF3Niq7I4pJYJ5lxfFov5SxCHZWARdGroHnXajCDHegj2xNYj3nfQVUVOYgKUeQdMtEMmgmL1kgaHveSC/j+AN/tEl4zQZ+sWW9gcc61AoG8jaPqTa7HNpJ9Rsjo8jX3XjXYK9pKXECKODOEbK90Eyy+lr+536BMpLBuY54PRsGxBJAVsaqRgQzZNp/W01+dJdrG4L6p72+c186tAdAaaFRy3+QCtzJxRdXObNhGqorHXOAGH19AU+4nALuQitZU1JjFO5ttrUWAaTWhzZPnppH6iXMFqSiKb2rSeihy/pykCUHvVw/49Q/csknm3qrjeyIcLzGgXITKzroklebuXKK2lnW9w0JtA7gVkbN4jWWImHGsJqGfPhkdmkK+P/ZDDxI2fArkFO/QjQFrPSWlzQK7ABG3gFLqoUhUj6Hkdzvq7lTILE=
